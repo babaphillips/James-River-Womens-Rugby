@@ -1,25 +1,28 @@
 <template>
-  <v-footer height="80" app class="">
+  <v-footer height="80" app class="logo">
     <v-row justify="center" no-gutters>
       <a
         v-for="item in items"
         :key="item.title"
         :href="item.href"
         :title="item.title"
-        class="d-inline-block mx-2 social-link"
+        class="d-inline-block mx-2"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <v-icon :icon="item.icon" :size="30" />
+        <v-icon :icon="item.icon" :size="30" color="blue-darken-4" />
       </a>
 
       <div
         class="text-disabled"
         style="position: absolute; right: 16px; margin-top: 6px"
       >
-        &copy; 2001-{{ new Date().getFullYear() }}
-        <span class="d-none d-sm-inline-block"
-          >by James River Women's Rugby</span
+        <span class="text-blue-darken-4">
+          &copy; 2001-{{ new Date().getFullYear() }}
+        </span>
+
+        <span class="d-none d-sm-inline-block text-blue-darken-4">
+          by James River Women's Rugby</span
         >
       </div></v-row
     >
@@ -48,12 +51,16 @@ const items = [
 ];
 </script>
 
-<style scoped lang="sass">
-.social-link :deep(.v-icon)
+<style scoped>
+/* .social-link :deep(.v-icon) 
   color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity))
   text-decoration: none
   transition: .2s ease-in-out
 
   &:hover
-    color: #2E7D32
+    color: #2E7D32 */
+
+.logo {
+  background-color: #243058;
+}
 </style>

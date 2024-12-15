@@ -1,25 +1,14 @@
 <template>
-  <v-card
-    class="bg-white"
-    :style="{
-      backgroundImage: `url(${logo})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-    }"
-  >
-    <!-- <v-img class="bg-grey-lighten-2" :src="logo" cover></v-img> -->
-    <v-card-title class="text-center justify-center py-6">
-      <!-- <h1 class="font-weight-bold text-h2 text-basil">
-        James River Womens Rugby
-      </h1> -->
-    </v-card-title>
+  <v-card class="logo">
+    <!-- Logo -->
+
+    <v-img :src="logo" max-height="100%" max-width="100%" cover></v-img>
 
     <!-- Tabs -->
-    <v-tabs v-model="tab" grow>
+    <v-tabs v-model="tab" grow elevation="0">
       <v-tab
         v-for="item in items"
-        color="blue-darken-4"
+        color="green"
         :key="item.text"
         :text="item.text"
         :value="item.value"
@@ -40,23 +29,21 @@
 </template>
 
 <script setup>
-import logo from "../assets/JRWRFC_Crest.png";
+import logo from "../assets/Nav.png";
 
 const tab = ref("home"); // Default tab value
 
 // Tab items with routes matching dynamically generated ones
 const items = ref([
   { text: "Home", value: "home", route: "/Home" },
-  { text: "Contact", value: "contact", route: "/Contact" },
   { text: "About", value: "about", route: "/About" },
   { text: "X Mas In July", value: "xmas", route: "/Xmas" },
+  { text: "Contact", value: "contact", route: "/Contact" },
 ]);
 </script>
+
 <style scoped>
-.card-with-background {
-  background-image: url("../assets/JRWRFC_Crest.png"); /* or use logoURL dynamically */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.logo {
+  background-color: #243058;
 }
 </style>
