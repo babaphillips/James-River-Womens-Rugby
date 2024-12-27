@@ -3,13 +3,7 @@
   <v-row class="d-flex justify-space-evenly ma-4">
     <!-- Contact Us Form Column (4 columns width on medium screens, full width on smaller screens) -->
     <v-col cols="12" md="3">
-      <v-card
-        class="bg-white"
-        variant="outlined"
-        elevation="10"
-        width="100%"
-        style="border-color: #092062; border-width: 2px"
-      >
+      <v-card variant="default" width="100%">
         <v-card-title
           class="ma-4 text-overline textConfig d-flex justify-center"
           >Contact Us!</v-card-title
@@ -43,7 +37,7 @@
             width="100%"
             class="pa-2"
           />
-          <v-btn class="float-right mb-2 mr-2" variant="tonal">
+          <v-btn class="float-right mb-2 mr-2" variant="outlined">
             <span class="text-white">Submit</span></v-btn
           >
         </form>
@@ -52,12 +46,7 @@
 
     <!-- Board Members Column (7 columns width on medium screens, full width on smaller screens) -->
     <v-col cols="12" md="9" class="d-flex justify-center">
-      <v-card
-        class="bg-white"
-        variant="outlined"
-        elevation="10"
-        style="border-color: #092062; border-width: 2px"
-      >
+      <v-card variant="default">
         <v-card-title class="ma-4 text-overline textConfig text-center">
           The 2024 JRW Board
         </v-card-title>
@@ -77,6 +66,7 @@
               variant="outlined"
               height="200px"
               width="250px"
+              style="border-color: #092062; border-width: 2px"
             >
               <!-- Profile Image -->
               <v-img
@@ -240,6 +230,6 @@ const sendEmail = () => {
 .textConfig {
   font-size: 1.8rem !important;
   font-weight: 650;
-  color: #029345;
+  color: #ffffff;
 }
 </style>
