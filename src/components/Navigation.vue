@@ -5,10 +5,9 @@
     <v-img :src="logo" max-height="100%" max-width="100%" cover></v-img>
 
     <!-- Tabs -->
-    <v-tabs v-model="tab" grow elevation="0">
+    <v-tabs v-model="tab" grow elevation="0" scrollable>
       <v-tab
         v-for="item in items"
-        color="green"
         :key="item.text"
         :text="item.text"
         :value="item.value"
@@ -29,7 +28,7 @@
 </template>
 
 <script setup>
-import logo from "../assets/Nav.png";
+import logo from "../assets/JRWRFC BANNER.png";
 
 const tab = ref("home"); // Default tab value
 
@@ -44,6 +43,6 @@ const items = ref([
 
 <style scoped>
 .logo {
-  background-color: #243058;
+  background-color: #029345;
 }
 </style>

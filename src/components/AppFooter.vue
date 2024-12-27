@@ -1,5 +1,5 @@
 <template>
-  <v-footer height="80" app class="logo">
+  <v-footer height="80" app class="logoColor">
     <v-row justify="center" no-gutters>
       <a
         v-for="item in items"
@@ -10,18 +10,18 @@
         rel="noopener noreferrer"
         target="_blank"
       >
-        <v-icon :icon="item.icon" :size="30" color="blue-darken-4" />
+        <v-icon :icon="item.icon" :size="30" color="green" />
       </a>
 
       <div
         class="text-disabled"
         style="position: absolute; right: 16px; margin-top: 6px"
       >
-        <span class="text-blue-darken-4">
+        <span class="text-green">
           &copy; 2001-{{ new Date().getFullYear() }}
         </span>
 
-        <span class="d-none d-sm-inline-block text-blue-darken-4">
+        <span class="d-none d-sm-inline-block text-green">
           by James River Women's Rugby</span
         >
       </div></v-row
@@ -60,7 +60,7 @@ const items = [
   &:hover
     color: #2E7D32 */
 
-.logo {
-  background-color: #243058;
+.logoColor {
+  background-color: #092062;
 }
 </style>

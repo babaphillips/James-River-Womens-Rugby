@@ -5,16 +5,22 @@
  */
 
 // Plugins
-import { registerPlugins } from '@/plugins'
+import { registerPlugins } from "@/plugins";
 
 // Components
-import App from './App.vue'
+import App from "./App.vue";
 
 // Composables
-import { createApp } from 'vue'
+import { createApp } from "vue";
+import Toast, { POSITION } from "vue-toastification";
+import "vue-toastification/dist/index.css";
 
-const app = createApp(App)
+const app = createApp(App);
 
-registerPlugins(app)
+registerPlugins(app);
 
-app.mount('#app')
+app.use(Toast, {
+  position: POSITION.BOTTOM_LEFT,
+});
+
+app.mount("#app");
