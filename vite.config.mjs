@@ -1,5 +1,5 @@
 // Plugins
-import AutoImport from "unplugin-auto-import/vite";
+// import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import Fonts from "unplugin-fonts/vite";
 import Layouts from "vite-plugin-vue-layouts";
@@ -37,13 +37,13 @@ export default defineConfig({
         ],
       },
     }),
-    AutoImport({
-      imports: ["vue", "vue-router"],
-      eslintrc: {
-        enabled: true,
-      },
-      vueTemplate: true,
-    }),
+    // AutoImport({
+    //   imports: ["vue", "vue-router"],
+    //   eslintrc: {
+    //     enabled: true,
+    //   },
+    //   vueTemplate: true,
+    // }),
   ],
   define: { "process.env": {} },
   resolve: {
