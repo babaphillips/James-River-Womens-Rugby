@@ -8,12 +8,14 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
+    "serve": "serve dist",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@mdi/font": "7.4.47",
     "emailjs-com": "^3.2.0",
     "roboto-fontface": "*",
+    "serve": "^14.2.4",
     "vue": "^3.4.31",
     "vue-toastification": "^2.0.0-rc.5",
     "vuetify": "^3.6.14"
