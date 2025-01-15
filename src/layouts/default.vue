@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Navigation></Navigation>
-    <v-main style="background-color: #029345">
+    <v-main class="bg-white">
       <router-view />
     </v-main>
     <AppFooter />

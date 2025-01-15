@@ -9,7 +9,6 @@
       <v-tab
         v-for="item in items"
         :key="item.text"
-        :style="{ color: tab === item.value ? '#092062' : '#092062' }"
         :text="item.text"
         :value="item.value"
         :to="item.route"
