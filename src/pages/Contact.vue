@@ -4,8 +4,7 @@
     <!-- Contact Us Form Column (4 columns width on medium screens, full width on smaller screens) -->
     <v-col cols="12" md="3">
       <v-card variant="default" width="100%">
-        <v-card-title
-          class="ma-4 text-overline textConfig d-flex justify-center"
+        <v-card-title class="text-overline textConfig d-flex justify-center"
           >Contact Us!</v-card-title
         >
 
@@ -14,31 +13,25 @@
             v-model="userName"
             placeholder="Your Name"
             variant="outlined"
-            color="green"
             required
             width="100%"
-            class="pa-2"
           />
           <v-text-field
             v-model="userEmail"
             placeholder="Your Email"
             variant="outlined"
             required
-            color="green"
             width="100%"
-            class="pa-2"
           />
           <v-textarea
             v-model="userMessage"
             placeholder="Message"
             variant="outlined"
-            color="green"
             required
             width="100%"
-            class="pa-2"
           />
-          <v-btn class="float-right mb-2 mr-2" variant="outlined">
-            <span class="text-white">Submit</span></v-btn
+          <v-btn class="float-right mr-2" variant="outlined">
+            <span style="color: #ffffff">Submit</span></v-btn
           >
         </form>
       </v-card>
@@ -47,8 +40,8 @@
     <!-- Board Members Column (7 columns width on medium screens, full width on smaller screens) -->
     <v-col cols="12" md="9" class="d-flex justify-center">
       <v-card variant="default">
-        <v-card-title class="ma-4 text-overline textConfig text-center">
-          The 2024 JRW Board
+        <v-card-title class="text-overline textConfig text-center">
+          The 2025 JRW Board
         </v-card-title>
 
         <v-row class="d-flex justify-center mb-4">
@@ -56,7 +49,7 @@
           <v-col
             v-for="(member, index) in boardMembers"
             :key="index"
-            cols="12"
+            cols="6"
             sm="6"
             md="3"
             class="d-flex justify-center"
@@ -66,7 +59,7 @@
               variant="outlined"
               height="200px"
               width="250px"
-              style="border-color: #092062; border-width: 2px"
+              style="border-color: #ffffff"
             >
               <!-- Profile Image -->
               <v-img
@@ -114,7 +107,7 @@ const boardMembers = ref([
     photo: "path/to/photo1.jpg",
   },
   {
-    name: "Sonya Richard",
+    name: "Jesse Pittard",
     role: "Vice President",
     email: "vp@jamesriverrugby.com",
     photo: "path/to/photo2.jpg",
@@ -132,31 +125,31 @@ const boardMembers = ref([
     photo: "path/to/photo4.jpg",
   },
   {
-    name: "Callie Pace",
+    name: "Trey Young",
     role: "Secretary",
     email: "teamsec@jamesriverrugby.com",
     photo: "path/to/photo5.jpg",
   },
   {
-    name: "Jane Duncan",
+    name: "Tylea Walker",
     role: "Recruitment Chair",
     email: "signup2play@jamesriverrugby.com",
     photo: "path/to/photo9.jpg",
   },
   {
-    name: "Elle Smith",
+    name: "Rachel McConaughy",
     role: "Social Chair",
     email: "socials@jamesriverrugby.com",
     photo: "path/to/photo9.jpg",
   },
   {
-    name: "Trei Young",
+    name: "Tasha Conerly",
     role: "Diversity & Cultural Ambassador",
     email: "diversity@jamesriverrugby.com",
     photo: "path/to/photo9.jpg",
   },
   {
-    name: "Fox Clemmer",
+    name: "Shelby Morris",
     role: "Member at Large",
     email: "teamrep@jamesriverrugby.com",
     photo: "path/to/photo10.jpg",
@@ -219,7 +212,7 @@ const sendEmail = () => {
 
 .v-btn {
   padding: 5px 20px;
-  background-color: #029345;
+  background-color: #092062;
 }
 
 .v-img {
@@ -228,8 +221,12 @@ const sendEmail = () => {
 }
 
 .textConfig {
-  font-size: 1.8rem !important;
-  font-weight: 650;
+  font-size: 1.5rem !important;
+  font-weight: 500;
   color: #ffffff;
+}
+
+.primaryBlue {
+  color: #092062;
 }
 </style>

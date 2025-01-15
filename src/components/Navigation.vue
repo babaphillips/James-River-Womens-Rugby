@@ -5,11 +5,11 @@
     <v-img :src="logo" max-height="100%" max-width="100%" cover></v-img>
 
     <!-- Tabs -->
-    <v-tabs v-model="tab" grow elevation="0" scrollable>
+    <v-tabs v-model="tab" grow scrollable align-tabs="center">
       <v-tab
         v-for="item in items"
         :key="item.text"
-        :style="{ color: tab === item.value ? '#092062' : '#092062' }"
+        :style="{ color: tab === item.value ? '#092062' : '#ffffff' }"
         :text="item.text"
         :value="item.value"
         :to="item.route"
