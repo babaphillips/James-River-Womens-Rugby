@@ -56,7 +56,6 @@
           >
             <v-card
               class="text-center board-card bg-white"
-              variant="outlined"
               height="200px"
               width="250px"
               style="border-color: #ffffff"
@@ -64,11 +63,10 @@
               <!-- Profile Image -->
               <v-img
                 :src="member.photo"
-                class="mx-auto mt-4"
-                height="70px"
-                width="70px"
-                contain
-                rounded
+                class="mx-auto mt-1"
+                width="100px"
+                height="100px"
+                cover
               />
               <v-card-title>{{ member.name }}</v-card-title>
               <v-card-subtitle>{{ member.role }}</v-card-subtitle>
@@ -89,7 +87,11 @@
 import { ref } from "vue";
 import emailjs from "emailjs-com";
 import { useToast } from "vue-toastification";
-
+import Emily from "../assets/IMG_3397.jpeg";
+import Trey from "../assets/IMG_3378.jpeg";
+import Rachel from "../assets/IMG_3385.jpeg";
+import Tylea from "../assets/IMG_3381.jpeg";
+import Vicky from "../assets/IMG_9160.jpeg";
 // Declare reactive references for userName, userEmail, and userMessage
 const userName = ref("");
 const userEmail = ref("");
@@ -104,7 +106,7 @@ const boardMembers = ref([
     name: "Emily Yanuskiewicz",
     role: "President",
     email: "president@jamesriverrugby.com",
-    photo: "path/to/photo1.jpg",
+    photo: Emily, // Path to the public folder
   },
   {
     name: "Jesse Pittard",
@@ -116,7 +118,7 @@ const boardMembers = ref([
     name: "Vicky Whydell",
     role: "Match Secretary",
     email: "matchsec@jamesriverrugby.com",
-    photo: "path/to/photo3.jpg",
+    photo: Vicky,
   },
   {
     name: "Grapes McElroy",
@@ -128,19 +130,19 @@ const boardMembers = ref([
     name: "Trey Young",
     role: "Secretary",
     email: "teamsec@jamesriverrugby.com",
-    photo: "path/to/photo5.jpg",
+    photo: Trey,
   },
   {
     name: "Tylea Walker",
     role: "Recruitment Chair",
     email: "signup2play@jamesriverrugby.com",
-    photo: "path/to/photo9.jpg",
+    photo: Tylea,
   },
   {
     name: "Rachel McConaughy",
     role: "Social Chair",
     email: "socials@jamesriverrugby.com",
-    photo: "path/to/photo9.jpg",
+    photo: Rachel,
   },
   {
     name: "Tasha Conerly",
@@ -197,10 +199,8 @@ const sendEmail = () => {
 <style scoped>
 /* Ensure all cards are the same height */
 .board-card {
-  height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 /* Styling adjustments to ensure consistency */
