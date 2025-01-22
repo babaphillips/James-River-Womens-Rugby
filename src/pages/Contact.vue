@@ -1,12 +1,23 @@
 <template>
-  <!-- Row with Contact Us on the left, spacing, and JRW Board on the right -->
-  <v-row class="d-flex justify-space-evenly ma-4">
+  <v-row class="ma-4 d-flex justify-center">
+    <v-col cols="12" class="mt-12 mb-n16">
+      <span class="d-flex justify-center"
+        >new player looking for more info?
+        <a
+          style="color: #092062"
+          href="https://drive.google.com/file/d/1CqQQONaCDBtOOluxSETrnha3UhLZovJN/view"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          click here
+        </a>
+        <br /></span
+    ></v-col>
+
     <!-- Contact Us Form Column (4 columns width on medium screens, full width on smaller screens) -->
     <v-col cols="12" md="3">
       <v-card variant="default" width="100%">
-        <v-card-title class="text-overline textConfig d-flex justify-center"
-          >Contact Us!</v-card-title
-        >
+        <v-card-title class="d-flex justify-center">contact us!</v-card-title>
 
         <form @submit.prevent="sendEmail">
           <v-text-field
@@ -31,53 +42,11 @@
             width="100%"
           />
           <v-btn class="float-right mr-2" variant="outlined">
-            <span style="color: #ffffff">Submit</span></v-btn
+            <span style="color: #ffffff" class="text-lowercase"
+              >Submit</span
+            ></v-btn
           >
         </form>
-      </v-card>
-    </v-col>
-
-    <!-- Board Members Column (7 columns width on medium screens, full width on smaller screens) -->
-    <v-col cols="12" md="9" class="d-flex justify-center">
-      <v-card variant="default">
-        <v-card-title class="text-overline textConfig text-center">
-          The 2025 JRW Board
-        </v-card-title>
-
-        <v-row class="d-flex justify-center mb-4">
-          <!-- Loop through board members -->
-          <v-col
-            v-for="(member, index) in boardMembers"
-            :key="index"
-            cols="6"
-            sm="6"
-            md="3"
-            class="d-flex justify-center"
-          >
-            <v-card
-              class="text-center board-card bg-white"
-              height="200px"
-              width="250px"
-              style="border-color: #ffffff"
-            >
-              <!-- Profile Image -->
-              <v-img
-                :src="member.photo"
-                class="mx-auto mt-1"
-                width="100px"
-                height="100px"
-                cover
-              />
-              <v-card-title>{{ member.name }}</v-card-title>
-              <v-card-subtitle>{{ member.role }}</v-card-subtitle>
-              <v-card-subtitle>
-                <a class="text-black" :href="'mailto:' + member.email">
-                  {{ member.email }}
-                </a>
-              </v-card-subtitle>
-            </v-card>
-          </v-col>
-        </v-row>
       </v-card>
     </v-col>
   </v-row>
@@ -87,11 +56,7 @@
 import { ref } from "vue";
 import emailjs from "emailjs-com";
 import { useToast } from "vue-toastification";
-import Emily from "../assets/IMG_3397.jpeg";
-import Trey from "../assets/IMG_3378.jpeg";
-import Rachel from "../assets/IMG_3385.jpeg";
-import Tylea from "../assets/IMG_3381.jpeg";
-import Vicky from "../assets/IMG_9160.jpeg";
+
 // Declare reactive references for userName, userEmail, and userMessage
 const userName = ref("");
 const userEmail = ref("");
@@ -99,70 +64,6 @@ const userMessage = ref("");
 
 // Initialize Toast
 const toast = useToast();
-
-// Board Members Data
-const boardMembers = ref([
-  {
-    name: "Emily Yanuskiewicz",
-    role: "President",
-    email: "president@jamesriverrugby.com",
-    photo: Emily, // Path to the public folder
-  },
-  {
-    name: "Jesse Pittard",
-    role: "Vice President",
-    email: "vp@jamesriverrugby.com",
-    photo: "path/to/photo2.jpg",
-  },
-  {
-    name: "Vicky Whydell",
-    role: "Match Secretary",
-    email: "matchsec@jamesriverrugby.com",
-    photo: Vicky,
-  },
-  {
-    name: "Grapes McElroy",
-    role: "Treasurer",
-    email: "finance@jamesriverrugby.com",
-    photo: "path/to/photo4.jpg",
-  },
-  {
-    name: "Trey Young",
-    role: "Secretary",
-    email: "teamsec@jamesriverrugby.com",
-    photo: Trey,
-  },
-  {
-    name: "Tylea Walker",
-    role: "Recruitment Chair",
-    email: "signup2play@jamesriverrugby.com",
-    photo: Tylea,
-  },
-  {
-    name: "Rachel McConaughy",
-    role: "Social Chair",
-    email: "socials@jamesriverrugby.com",
-    photo: Rachel,
-  },
-  {
-    name: "Tasha Conerly",
-    role: "Diversity & Cultural Ambassador",
-    email: "diversity@jamesriverrugby.com",
-    photo: "path/to/photo9.jpg",
-  },
-  {
-    name: "Shelby Morris",
-    role: "Member at Large",
-    email: "teamrep@jamesriverrugby.com",
-    photo: "path/to/photo10.jpg",
-  },
-  {
-    name: "Tim",
-    role: "Head Coach",
-    email: "teamrep@jamesriverrugby.com",
-    photo: "path/to/photo10.jpg",
-  },
-]);
 
 // Function to send email using EmailJS
 const sendEmail = () => {
@@ -195,38 +96,3 @@ const sendEmail = () => {
     });
 };
 </script>
-
-<style scoped>
-/* Ensure all cards are the same height */
-.board-card {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Styling adjustments to ensure consistency */
-.v-card-title,
-.v-card-subtitle {
-  padding: 0 10px;
-  margin-bottom: 10px;
-}
-
-.v-btn {
-  padding: 5px 20px;
-  background-color: #092062;
-}
-
-.v-img {
-  border-radius: 50%; /* Make the image round */
-  overflow: hidden;
-}
-
-.textConfig {
-  font-size: 1.5rem !important;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.primaryBlue {
-  color: #092062;
-}
-</style>

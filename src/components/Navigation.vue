@@ -1,11 +1,11 @@
 <template>
-  <v-card class="logo">
+  <div class="logo">
     <!-- Logo -->
 
     <v-img :src="logo" max-height="100%" max-width="100%" cover></v-img>
 
     <!-- Tabs -->
-    <v-tabs v-model="tab" grow scrollable align-tabs="center">
+    <v-tabs v-model="tab" scrollable grow>
       <v-tab
         v-for="item in items"
         :key="item.text"
@@ -13,6 +13,7 @@
         :text="item.text"
         :value="item.value"
         :to="item.route"
+        class="text-lowercase pa-2"
       ></v-tab>
     </v-tabs>
 
@@ -25,7 +26,7 @@
       >
       </v-tabs-window-item>
     </v-tabs-window>
-  </v-card>
+  </div>
 </template>
 
 <script setup>
@@ -36,9 +37,10 @@ const tab = ref("home"); // Default tab value
 // Tab items with routes matching dynamically generated ones
 const items = ref([
   { text: "Home", value: "home", route: "/Home" },
+  { text: "Schedule & Scores", value: "schedule", route: "/Schedule" },
   { text: "About", value: "about", route: "/About" },
   { text: "X Mas In July", value: "xmas", route: "/Xmas" },
-  { text: "Contact", value: "contact", route: "/Contact" },
+  { text: "Join Us/Get Involved", value: "contact", route: "/Contact" },
 ]);
 </script>
 
