@@ -40,7 +40,7 @@ const items = ref([
   { text: "Schedule & Scores", value: "schedule", route: "/Schedule" },
   { text: "About", value: "about", route: "/About" },
   { text: "X Mas In July", value: "xmas", route: "/Xmas" },
-  { text: "Join Us/Get Involved", value: "contact", route: "/Contact" },
+  { text: "Join Us", value: "contact", route: "/Contact" },
 ]);
 </script>
 
