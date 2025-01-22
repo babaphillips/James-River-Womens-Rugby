@@ -1,6 +1,6 @@
 <template>
   <v-row class="ma-4 d-flex justify-center">
-    <v-col cols="12" class="mt-12 mb-n16">
+    <v-col cols="12" class="mt-12">
       <span class="d-flex justify-center"
         >new player looking for more info?
         <a
