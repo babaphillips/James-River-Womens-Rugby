@@ -9,9 +9,6 @@ import { createRouter, createWebHistory } from "vue-router/auto";
 import { setupLayouts } from "virtual:generated-layouts";
 import { routes } from "vue-router/auto-routes";
 
-// Import Home component
-import Home from "../pages/Home.vue";
-
 // Add Home route
 const customRoutes = [
   {
